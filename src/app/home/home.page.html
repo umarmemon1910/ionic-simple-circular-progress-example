@@ -1,20 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Simple Circular Progressbar </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div style="display: flex; flex-direction: column">
+    <div style="width: 200px; height: 200px; text-align: center; margin: 2rem">
+      <simple-circular-progress> </simple-circular-progress>
+      <br />
+      <span>Default without any property</span>
+    </div>
+    <div style="width: 200px; height: 200px; text-align: center; margin: 2rem">
+      <simple-circular-progress hide-label="true"> </simple-circular-progress>
+      <br />
+      <span>Hide the label from center of progressbar</span>
+    </div>
+    <div style="width: 200px; height: 200px; text-align: center; margin: 2rem">
+      <simple-circular-progress
+        progress-percentage="60"
+        progress-color="#153e52"
+      >
+      </simple-circular-progress>
+      <br />
+      <span>Progressbar percentage with custom color</span>
+    </div>
+    <div style="width: 200px; height: 200px; text-align: center; margin: 2rem">
+      <simple-circular-progress
+        progress-percentage="60"
+        progress-color="#153e52"
+        progress-stroke-color="#a8d3e8"
+      >
+      </simple-circular-progress>
+      <br />
+      <span>Custom progressbar and stroke color</span>
+    </div>
+    <div style="width: 200px; height: 200px; text-align: center; margin: 2rem">
+      <simple-circular-progress
+        progress-percentage="70"
+        progress-color="#009688"
+        label="<strong>70%<br/> Profile completed </strong>"
+        label-font-size="1rem"
+      >
+      </simple-circular-progress>
+      <br />
+      <span>Custom label and label font size</span>
+    </div>
   </div>
 </ion-content>
